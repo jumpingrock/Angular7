@@ -1,1 +1,14 @@
-<p>{{'Server'}} with ID {{serverId}} is {{getServerStatus()}}</p>
+<!-- <p [ngStyle]="{backgroundColor: getColor()}">{{'Server'}} with ID {{serverId}} is {{getServerStatus()}}</p> -->
+<p [ngStyle]="{'background-color': getColor()}"
+[ngClass]="{online: serverStatus === 'online'}">
+  {{'Server'}} with ID {{serverId}} is {{getServerStatus()}}
+</p>
+
+<!-- //ngStyles is a directive
+//square bracket property binding -->
+<!-- can use javascript notation 'background-color' with the quotation mark
+or use camel case backgroundColor for typescript -->
+
+<!-- ngClass allow dynamic addition or removal of classes  -->
+<!-- if  -->
+
